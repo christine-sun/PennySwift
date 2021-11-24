@@ -1,4 +1,4 @@
-#PennySwift
+# PennySwift
 
 The simplest version of Penny built on Swift.
 Models the Penny application shown in COS333 lecture.
