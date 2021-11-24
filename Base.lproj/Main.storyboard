@@ -16,16 +16,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WrY-OW-ZNa">
-                                <rect key="frame" x="20" y="79" width="359" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PennySwift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egt-iw-cfd">
+                                <rect key="frame" x="104" y="63" width="207" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="9ib-Em-Fe6"/>
+                                    <constraint firstAttribute="width" constant="207" id="EFb-oG-A2o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter an author" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WrY-OW-ZNa">
+                                <rect key="frame" x="28" y="137" width="359" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="IZg-ge-LGG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <connections>
+                                    <action selector="textDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="jXv-k3-yCX"/>
+                                </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The results go here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wX-R3-B4l">
+                                <rect key="frame" x="28" y="194" width="359" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="668" id="SP4-kc-0mm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6wX-R3-B4l" secondAttribute="trailing" constant="27" id="89q-6g-2sP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="egt-iw-cfd" secondAttribute="trailing" constant="103" id="8bU-o9-iw7"/>
+                            <constraint firstItem="WrY-OW-ZNa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="IEe-sg-OjO"/>
+                            <constraint firstItem="egt-iw-cfd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="104" id="L6J-qP-Qt5"/>
+                            <constraint firstItem="egt-iw-cfd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="O3C-P2-plX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WrY-OW-ZNa" secondAttribute="trailing" constant="27" id="Vzj-cS-cOs"/>
+                            <constraint firstItem="6wX-R3-B4l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="Wrs-hj-Wus"/>
+                            <constraint firstItem="WrY-OW-ZNa" firstAttribute="top" secondItem="egt-iw-cfd" secondAttribute="bottom" constant="22" id="X7W-wc-jIl"/>
+                            <constraint firstItem="6wX-R3-B4l" firstAttribute="top" secondItem="WrY-OW-ZNa" secondAttribute="bottom" constant="21" id="snT-Xg-wgK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authorTextField" destination="WrY-OW-ZNa" id="5Hh-bI-0nn"/>
+                        <outlet property="resultsLabel" destination="6wX-R3-B4l" id="erq-RA-pi6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
